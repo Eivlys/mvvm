@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MVVM Demo</title>
+
+</head>
+<body>
+	<style type="text/css">
+
+		.input-block{
+			width: 200px;
+
+			display: inline-block;
+			float: left;
+			position: relative;
+			margin-right: 20px;
+		}
+		label,input,select{
+			width: 100%;
+			height: 25px;
+
+		}
+
+		.result-block{
+			clear: both;
+		}
+
+		table{
+			width: 640px;
+			height: auto;
+			clear: both;
+			border-collapse: collapse;
+		}
+		th,tr{
+			30px;
+		}
+		td{
+			border: 1px solid #ccc;
+		}
+		.action-block{
+			display: block-inline;
+			float: left;
+			position: relative;
+		}
+		button{
+			width: auto;
+			height: 30px;
+			margin: 20px 10px;
+		}
+
+	</style>
+	<div>
+		<h2>查询</h2>
+		<form name="search">
+			<div class="input-block">
+				<label>姓名</label>
+				<input type="text" name="name">
+			</div>
+			<div class="input-block">
+				<label>性别</label>
+				<select name="sex">
+					<option>男</option>
+					<option>女</option>
+				</select>
+			</div>
+			<div class="input-block">
+				<label>年龄</label>
+				<input type="text" name="age">
+			</div>
+		</form>
+	</div><br><br><br>
+
+	<div class="result-block">
+		<div>
+			<h2 class="action-block">结果</h2>
+			<button class="action-block" id="add">新增</button>
+			<button class="action-block" id="submit">提交结果</button>
+		</div>
+		<table id="table">
+			<tr>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+			
+		</table> 
+	</div><br><br>
+
+	<div id="dataEdit">
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="viewmodel.js"></script>
+</body>
+</html>
