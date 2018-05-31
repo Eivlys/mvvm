@@ -51,21 +51,22 @@
 	</style>
 	<div>
 		<h2>查询</h2>
-		<form name="search">
+		<form name="search" scope="search">
 			<div class="input-block">
 				<label>姓名</label>
-				<input type="text" name="name">
+				<input type="text" class="filter" name="name" data="name">
 			</div>
 			<div class="input-block">
 				<label>性别</label>
-				<select name="sex">
-					<option>男</option>
-					<option>女</option>
+				<select name="sex" data="sex" class="filter">
+					<option value="">请选择</option>
+					<option value="male">男</option>
+					<option value="female">女</option>
 				</select>
 			</div>
 			<div class="input-block">
 				<label>年龄</label>
-				<input type="text" name="age">
+				<input type="text" class="filter" name="age" data="age" 
 			</div>
 		</form>
 	</div><br><br><br>
@@ -76,7 +77,7 @@
 			<button class="action-block" id="add">新增</button>
 			<button class="action-block" id="submit">提交结果</button>
 		</div>
-		<table id="table">
+		<table id="table" scope="result">
 			<tr>
 				<td>姓名</td>
 				<td>性别</td>
